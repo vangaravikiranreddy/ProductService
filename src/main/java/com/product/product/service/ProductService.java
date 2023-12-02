@@ -8,7 +8,7 @@ public interface ProductService {
     GenericProductDto getProductById(long id) throws ProductNotFoundException;
     FakeStoreApiDto[] getAllProducts();
 
-    FakeStoreApiDto addProduct(FakeStoreApiDto fakeStoreApiDto);
-    FakeStoreApiDto deleteProductById(long id);
+    GenericProductDto addProduct(FakeStoreApiDto fakeStoreApiDto);
+    GenericProductDto deleteProductById(long id);
     GenericProductDto updateProduct(long id, FakeStoreApiDto fakeStoreApiDto);
 }

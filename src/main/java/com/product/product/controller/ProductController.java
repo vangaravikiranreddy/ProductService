@@ -25,11 +25,11 @@ public class ProductController {
         return productService.getAllProducts();
     }
     @PostMapping("")
-    public FakeStoreApiDto addProduct(@RequestBody FakeStoreApiDto fakeStoreApiDto) {
+    public GenericProductDto addProduct(@RequestBody FakeStoreApiDto fakeStoreApiDto) {
         return productService.addProduct(fakeStoreApiDto);
     }
     @DeleteMapping("/{id}")
-    public FakeStoreApiDto deleteProductById(@PathVariable("id") long id) {
+    public GenericProductDto deleteProductById(@PathVariable("id") long id) {
         return productService.deleteProductById(id);
     }
     @PutMapping("/{id}")
